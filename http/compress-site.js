@@ -2,7 +2,8 @@ const express = require("express");
 const compression = require("compression"); //The compression library sets the Content-Encoding header to the encoding mechanism used for compressing the response body.
 const app = express();
 
-//Include the compression middleware function. Specify the level of compression to 9 (best compression) and threshold, or minimum size in bytes that the response should have to consider compressing the response body, to 0 bytes:
+// Include the compression middleware function. Specify the level of compression to 9 (best compression)
+// and threshold, or minimum size in bytes that the response should have to consider compressing the response body, to 0 bytes:
 app.use(compression({ level: 9, threshold: 0 }));
 
 app.get("/", (request, response, next) => {

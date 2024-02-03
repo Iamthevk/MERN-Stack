@@ -4,7 +4,7 @@ const app = express();
 
 app.use(
   loggerMiddleware({
-    enable: false,
+    enable: true,
   })
 );
 
