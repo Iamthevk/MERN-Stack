@@ -36,7 +36,7 @@ connection.once("connected", async () => {
       .select("lastName age"); //use the select method to restrict which fields are retrieved from the document
 
     console.log(JSON.stringify(findUser, null, 4)); //{ "_id": "65c26f8b07f871909e50cdae","lastName": "Das","age": 24}
-    await user.remove();
+    await user.deleteOne();
   } catch (error) {
     console.dir(error.message, { colors: true });
   } finally {
