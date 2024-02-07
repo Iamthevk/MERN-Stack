@@ -9,6 +9,9 @@ app.get("/", (request, response, next) => {
   }
 });
 
+// A custom error handler middleware function can be written as well
+// and it looks pretty much the same as route handlers do with the exception
+// that an error handler function middleware expects to receive four arguments
 app.use((error, request, response, next) => {
   response.end(error.message);
 });

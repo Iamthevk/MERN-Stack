@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 
+// Middleware functions are mainly used to make changes in the request and response object
+// They are executed in sequence, one after another,
+// but if a middleware functions does not pass control to the next one, the request is left hanging.
+
 app.use((request, response, next) => {
   request.allowed = Reflect.has(request.query, "allowme");
   next();

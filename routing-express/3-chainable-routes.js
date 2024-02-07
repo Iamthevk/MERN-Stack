@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 
+//Route methods can be chainable using app.route(path),it makes the code more readable and less prone to typos and redundancy
 app
   .route("/home")
   .get((request, response, nextHandler) => {

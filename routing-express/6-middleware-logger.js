@@ -1,3 +1,4 @@
+// configurable middleware function
 const logger = (options) => (request, response, next) => {
   if (typeof options === "object" && options !== null && options.enable) {
     console.log(
